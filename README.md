@@ -1,9 +1,6 @@
 # Semantic Similarity Project
 
-This repository contains starter code for a semantic similarity project, which explores vector-based representations of word semantics. The project calculates the similarity between words using cosine similarity and evaluates the model's performance on a set of test questions. 
-
-Authors: **Shervin Darmanki Farahani**, **Michael Guerzhoy**  
-Last Modified: **December 3, 2023**
+This repository contains starter code for a semantic similarity project, which explores vector-based representations of word semantics. The project calculates the similarity between words using cosine similarity and evaluates the model's performance on a set of test questions. This project is part of ESC180 (Introduction to Computer Programming at the University of Toronto.
 
 ---
 
