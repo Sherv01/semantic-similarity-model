@@ -1,4 +1,3 @@
-```markdown
 # Semantic Similarity Project
 
 This repository contains starter code for a semantic similarity project, which explores vector-based representations of word semantics. The project calculates the similarity between words using cosine similarity and evaluates the model's performance on a set of test questions. 
