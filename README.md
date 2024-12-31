@@ -12,26 +12,33 @@ This repository contains starter code for a semantic similarity project, which e
 
 ---
 
-## Code Overview
+### Functionality Overview
 
-### `norm(vec)`
-Calculates the Euclidean norm of a vector represented as a dictionary.
+The code offers several functionalities to analyze and compare word meanings:
 
-### `cosine_similarity(vec1, vec2)`
-Computes the cosine similarity between two vectors.
+*   **Vector Norm Calculation (`norm(vec)`)**
 
-### `build_semantic_descriptors(sentences)`
-Builds a dictionary of semantic descriptors from a list of tokenized sentences.
+    Computes the norm (magnitude) of a vector represented as a dictionary. This helps quantify the overall strength of the semantic representation.
 
-### `build_semantic_descriptors_from_files(filenames)`
-Processes text files to build semantic descriptors. Converts text into sentences, tokenizes words, and calculates co-occurrences.
+*   **Cosine Similarity (`cosine_similarity(vec1, vec2)`)**
 
-### `most_similar_word(word, choices, semantic_descriptors, similarity_fn)`
-Returns the most semantically similar word from a list of choices, based on a given similarity function.
+    Calculates the cosine similarity between two word vectors based on their co-occurrence counts. This metric reflects how closely the semantic profiles of two words align.
 
-### `run_similarity_test(filename, semantic_descriptors, similarity_fn)`
-Evaluates the performance of the semantic similarity model on a test dataset. Reports the percentage of correct guesses.
+*   **Building Semantic Descriptors (`build_semantic_descriptors(sentences)`)**
 
+    Constructs a dictionary representing the semantic context for each word in a list of sentences. It tracks how often words appear alongside other words within the same sentence.
+
+*   **Building Semantic Descriptors from Files (`build_semantic_descriptors_from_files(filenames)`)**
+
+    Reads text files, cleans the content, and extracts sentences and words. It then calls `build_semantic_descriptors` to create semantic representations for each word.
+
+*   **Finding the Most Similar Word (`most_similar_word(word, choices, semantic_descriptors, similarity_fn)`)**
+
+    Given a word, a list of potential synonyms (choices), a dictionary of semantic descriptors, and a similarity function, identifies the word in the "choices" list that is most semantically similar to the given word.
+
+*   **Running Similarity Test (`run_similarity_test(filename, semantic_descriptors, similarity_fn)`)**
+
+    Evaluates the accuracy of the system on a provided test file. The test file contains lines with a question word, an answer word, and a set of other words (choices). This function uses the semantic descriptors and similarity function to find the most similar word to the question word from the choices within each line. It then calculates the percentage of correctly identified answers.
 ---
 
 ## Example Usage
